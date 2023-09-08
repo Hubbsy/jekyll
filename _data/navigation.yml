@@ -1,0 +1,90 @@
+main:
+  - title: "Part A"
+    url: /parta/batch-listing/
+  - title: "Inquiry"
+    url: /inquiry/affidavit-inquiry/
+  - title: "Helpdesk"
+    url: /helpdesk/transaction-inquiry/
+
+docs:
+  - title: "Part A"
+    url: /guides/parta/
+    children:
+      - title: "Batch Listing"
+        url: /parta/batch-listing/
+      - title: "Ensorsements"
+        url: /parta/endorsement-transactions/
+  - title: "Inquiry"
+    url: /guides/inquiry/
+    children:
+      - title: "Affidavits"
+        url: /inquiry//affidavit-inquiry/
+      - title: "Declining Companies"
+        url: /inquiry/declining-companies/
+  - title: "Helpdesk"
+    url: /guides/helpdesk/transcation-inquiry/
+    children:
+      - title: "Transaction Inquiry"
+        url: /helpdesk/transaction-inquiry/
+      - title: "Stuck Batches"
+        url: /helpdesk/stuck-batches/
+
+parta:
+  - title: "Part A"
+    url: /guides/parta/
+    children:
+      - title: "Batch Listing"
+        url: /parta/batch-listing/
+      - title: "Ensorsements"
+        url: /parta/endorsement-transactions/
+  # - title: "Inquiry"
+  #   url: /guides/inquiry/
+  #   children:
+  #     - title: "Affidavit Inquiry"
+  #       url: /inquiry//affidavit-inquiry/
+  # - title: "Helpdesk"
+  #   url: /guides/helpdesk/transcation-inquiry/
+  #   children:
+  #     - title: "Transaction Inquiry"
+  #       url: /helpdesk/transaction-inquiry/
+
+inquiry:
+  - title: "Inquiry"
+    url: /guides/inquiry/
+    children:
+      - title: "Affidavits"
+        url: /inquiry/affidavit-inquiry/
+      - title: "Declining Companies"
+        url: /inquiry/declining-companies/
+  # - title: "Part A"
+  #   url: /guides/parta/
+  #   children:
+  #     - title: "Batch Listing"
+  #       url: /parta/batch-listing/
+  #     - title: "Ensorsements"
+  #       url: /parta/endorsement-transactions/
+  # - title: "Helpdesk"
+  #   url: /guides/helpdesk/transcation-inquiry/
+  #   children:
+  #     - title: "Transaction Inquiry"
+  #       url: /helpdesk/transaction-inquiry/
+helpdesk:
+  - title: "Helpdesk"
+    url: /guides/helpdesk/transcation-inquiry/
+    children:
+      - title: "Transaction Inquiry"
+        url: /helpdesk/transaction-inquiry/
+      - title: "Stuck Batches"
+        url: /helpdesk/stuck-batches/
+  # - title: "Part A"
+  #   url: /guides/parta/
+  #   children:
+  #     - title: "Batch Listing"
+  #       url: /parta/batch-listing/
+  #     - title: "Ensorsements"
+  #       url: /parta/endorsement-transactions/
+  # - title: "Inquiry"
+  #   url: /guides/inquiry/
+  #   children:
+  #     - title: "Affidavit Inquiry"
+  #       url: /inquiry/affidavit-inquiry/

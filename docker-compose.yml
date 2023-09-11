@@ -2,7 +2,7 @@
 
 services:
   jekyll:
-    image: hubbsy642/jekyll
+    image: hubbsy642/jekyll-serve
     volumes:
       - .:/site
     ports:

@@ -24,7 +24,6 @@ jobs:
       #   with:
       #     push: ${{ github.event_name != 'pull_request' }}
       #     tags: hubbsy642/jekyll-serve:latest,hubbsy642/jekyll-serve:01
-<<<<<<< HEAD
 
       - name: executing remote ssh commands using password
         uses: appleboy/ssh-action@v1.0.0
@@ -33,8 +32,7 @@ jobs:
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
           script: whoami
-=======
-          
+
       - name: print out example job
         uses: appleboy/ssh-action@v1.0.0
         with:
@@ -42,6 +40,5 @@ jobs:
           username: ${{ secrets.SSH_USERNAME }}
           key: ${{ secrets.SSH_SECRET }}
           command_timeout: 30m
-          script: | 
+          script: |
             echo "Nice Job!!!"
->>>>>>> e30ab4fe5fd108c5b14658707e4084451a52fc10

@@ -30,7 +30,7 @@ jobs:
         with:
           host: rsi@eefsapp2-ssu.elany.org
           username: ${{ secrets.SSH_USERNAME }}
-          key: ${{ secrets.SSH_SECRET }}
+          password: ${{ secrets.SSH_PASSWORD }}
           command_timeout: 30m
           script: | 
             echo "Nice Job!!!"

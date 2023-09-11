@@ -26,7 +26,7 @@ jobs:
       #     tags: hubbsy642/jekyll-serve:latest,hubbsy642/jekyll-serve:01
           
       - name: print out example job
-        uses: appleboy/ssh-action@v0.1.10
+        uses: appleboy/ssh-action@v1.0.0
         with:
           host: ${{ serets.SSH_HOST }}
           username: ${{ secrets.SSH_USERNAME }}

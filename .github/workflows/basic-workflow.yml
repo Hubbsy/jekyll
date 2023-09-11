@@ -30,7 +30,7 @@ jobs:
         with:
           host: eefsapp2-ssu
           username: ${{ secrets.SSH_USERNAME }}
-          key: ${{ secrets.SSH_KEY }}
+          key: ${{ secrets.SSH_SECRET }}
           command_timeout: 30m
           script: | 
             echo "Nice Job!!!"

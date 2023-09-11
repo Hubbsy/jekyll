@@ -25,15 +25,7 @@ jobs:
       #     push: ${{ github.event_name != 'pull_request' }}
       #     tags: hubbsy642/jekyll-serve:latest,hubbsy642/jekyll-serve:01
 
-      - name: executing remote ssh commands using password
-        uses: appleboy/ssh-action@v1.0.0
-        with:
-          host: ${{ secrets.HOST }}
-          username: ${{ secrets.USERNAME }}
-          password: ${{ secrets.PASSWORD }}
-          script: whoami
-
-      - name: print out example job
+      - name: executing ssh to remote server
         uses: appleboy/ssh-action@v1.0.0
         with:
           host: eefsapp2-ssu.elany.org

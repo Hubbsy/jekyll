@@ -1,5 +1,5 @@
 # no version needed since 2020
-
+version: "3.3"
 services:
   jekyll:
     image: hubbsy642/jekyll-serve

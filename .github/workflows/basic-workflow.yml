@@ -40,7 +40,7 @@ jobs:
         # https://stackoverflow.com/a/70447517
         run: |
           install -m 600 -D /dev/null ~/.ssh/git-actions
-          cat "${{ secrets.SSH_KEY }}" > ~/.ssh/git-actions
+          echo "${{ secrets.SSH_KEY }}" > ~/.ssh/git-actions
           ssh-keyscan -H ${{ secrets.HOST }} > ~/.ssh/known_hosts
       - name: connect and pull
         run: ssh ${{ secrets.USERNAME }}@${{ secrets.HOST }}

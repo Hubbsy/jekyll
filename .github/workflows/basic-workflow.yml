@@ -28,7 +28,7 @@ jobs:
       - name: executing ssh to remote server
         uses: appleboy/ssh-action@v1.0.0
         with:
-          host: eefsapp2-ssu.elany.org
+          host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.SSH_KEY }}
           command_timeout: 30m

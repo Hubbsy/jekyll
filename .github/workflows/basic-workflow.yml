@@ -25,24 +25,24 @@ jobs:
       #     push: ${{ github.event_name != 'pull_request' }}
       #     tags: hubbsy642/jekyll-serve:latest,hubbsy642/jekyll-serve:01
 
-      # - name: executing ssh to remote server
-      #   uses: appleboy/ssh-action@v1.0.0
-      #   with:
-      #     host: ${{ secrets.HOST }}
-      #     username: ${{ secrets.USERNAME }}
-      #     key: ${{ secrets.SSH_KEY }}
-      #     command_timeout: 30m
-      #     script: |
-      #       echo "Nice Job!!!"
+      - name: executing ssh to remote server
+        uses: appleboy/ssh-action@v1.0.0
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.SSH_KEY }}
+          command_timeout: 30m
+          script: |
+            echo "Nice Job!!!"
 
       - name: install ssh keys
         # check this thread to understand why its needed:
         # https://stackoverflow.com/a/70447517
         run: |
-          install -m 600 -D /dev/null ~/.ssh/git-actions
-          echo "${{ secrets.SSH_KEY }}" > ~/.ssh/git-actions
+          install -m 600 -D /dev/null ~/.ssh/id_rsa
+          echo "${{ secrets.SSH_KEY }}" > ~/.ssh/id_rsa
           ssh-keyscan -H ${{ secrets.HOST }} > ~/.ssh/known_hosts
-      - name: connect to remote server
+      - name: connect and pull
         run: ssh ${{ secrets.USERNAME }}@${{ secrets.HOST }}
       - name: do something
         run: echo "Boom Baby!"

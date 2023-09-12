@@ -25,21 +25,21 @@ jobs:
       #     push: ${{ github.event_name != 'pull_request' }}
       #     tags: hubbsy642/jekyll-serve:latest,hubbsy642/jekyll-serve:01
 
-      # - name: executing ssh to remote server
-      #   uses: appleboy/ssh-action@v1.0.0
-      #   with:
-      #     host: eefsapp2-ssu.elany.org
-      #     username: ${{ secrets.SSH_USERNAME }}
-      #     key: ${{ secrets.SSH_KEY }}
-      #     command_timeout: 30m
-      #     script: |
-      #       echo "Nice Job!!!"
-
-      - name: executing remote ssh commands using password
+      - name: executing ssh to remote server
         uses: appleboy/ssh-action@v1.0.0
         with:
-          host: ${{ secrets.HOST }}
+          host: eefsapp2-ssu.elany.org
           username: ${{ secrets.USERNAME }}
-          password: ${{ secrets.PASSWORD }}
-          port: 22
-          script: whoami
+          key: ${{ secrets.SSH_KEY }}
+          command_timeout: 30m
+          script: |
+            echo "Nice Job!!!"
+
+      # - name: executing remote ssh commands using password
+      #   uses: appleboy/ssh-action@v1.0.0
+      #   with:
+      #     host: ${{ secrets.HOST }}
+      #     username: ${{ secrets.USERNAME }}
+      #     password: ${{ secrets.PASSWORD }}
+      #     port: 22
+      #     script: whoami
